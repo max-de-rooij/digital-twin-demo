@@ -1,0 +1,29 @@
+[workspace]
+authors = ["max-de-rooij <54850292+max-de-rooij@users.noreply.github.com>"]
+channels = ["conda-forge"]
+name = "digital-twin-demo"
+platforms = ["osx-arm64"]
+version = "0.1.0"
+
+[tasks]
+backend = {cmd = "uvicorn app.main:app --reload", cwd = "backend"}
+frontend = {cmd = "npm run dev", cwd = "frontend"}
+
+[dependencies]
+nodejs = ">=26.5.0,<26.6"
+python = ">=3.14.6,<3.15"
+fastapi = ">=0.141.1,<0.142"
+uvicorn = ">=0.52.0,<0.53"
+numpy = ">=2.5.1,<3"
+pydantic = ">=2.13.4,<3"
+
+[feature.lint.dependencies]
+ruff = "*"
+
+[feature.test.dependencies]
+pytest = "*"
+
+[environments]
+production = { solve-group = "prod" }
+test = { features = ["lint", "test"], solve-group = "prod" }
+default = { features = ["lint", "test"], solve-group = "prod" }
