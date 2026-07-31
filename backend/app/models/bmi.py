@@ -1,8 +1,8 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 class BMIRequest(BaseModel):
-    weight: float
-    height: float
+    weight: float = Field(gt = 0, description="Weight in kilograms")
+    height: float = Field(gt = 0, description="Height in meters")
 
 
 class BMIResponse(BaseModel):

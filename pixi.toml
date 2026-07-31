@@ -8,6 +8,7 @@ version = "0.1.0"
 [tasks]
 backend = {cmd = "uvicorn app.main:app --reload", cwd = "backend"}
 frontend = {cmd = "npm run dev", cwd = "frontend"}
+test = {cmd = "pytest", cwd = "backend"}
 
 [dependencies]
 nodejs = ">=26.5.0,<26.6"
@@ -16,6 +17,7 @@ fastapi = ">=0.141.1,<0.142"
 uvicorn = ">=0.52.0,<0.53"
 numpy = ">=2.5.1,<3"
 pydantic = ">=2.13.4,<3"
+httpx2 = ">=2.9.1,<3"
 
 [feature.lint.dependencies]
 ruff = "*"
