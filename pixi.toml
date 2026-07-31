@@ -7,7 +7,9 @@ version = "0.1.0"
 
 [tasks]
 backend = {cmd = "uvicorn app.main:app --reload", cwd = "backend"}
-frontend = {cmd = "npm run dev", cwd = "frontend"}
+frontend-install = { cmd = "npm install", cwd = "frontend" }
+frontend = { cmd = "npm run dev", cwd = "frontend" }
+frontend-build = { cmd = "npm run build", cwd = "frontend" }
 test = {cmd = "pytest", cwd = "backend"}
 
 [dependencies]
