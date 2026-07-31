@@ -97,3 +97,21 @@ If you are working with sensitive data, please DO NOT upload any of it to GitHub
 You want to train an AI model on sensitive data, and use this model to make predictions in your application. To prevent sensitive data from leaking into your application, you can train the model in a separate project that is not connected to your application. The code can be in a separate GitHub repository, and the data is stored in a secure database (and not in the GitHub repository). 
 
 After training, you can then export the trained model weights into your application to build a prediction service, and use it in your application without exposing any sensitive data. For demonstration purposes, you can build a mock database in SQLite, which is stored as a file wihtin the Github repository, and use this to demonstrate how your application works. This way, you can show the functionality of your application without exposing any sensitive data.
+
+## Information about the tools used in this project
+There may be several new tools that you may not be faimiliar with. Below is a brief description of some tools that may be new to you, and how they are used in this project.
+
+### FastAPI
+The backend of this application is built using [FastAPI](https://fastapi.tiangolo.com/). FastAPI is a modern, fast (high-performance), web framework for building APIs with Python 3.7+ based on standard Python type hints.
+
+### Vite
+The frontend of this application is built using [Vite](https://vitejs.dev/). Vite is just used for development purposes.
+
+### Lit
+The frontend of this application is built using [Lit](https://lit.dev/). Lit is a simple library for building fast, lightweight web components. It is built on top of the Web Components standard, which allows you to create reusable components that can be used in any web application.
+
+### TypeScript
+The frontend of this application is built using [TypeScript](https://www.typescriptlang.org/). TypeScript is a strongly typed programming language that builds on JavaScript, giving you better tooling at any scale. It is a superset of JavaScript, which means that any valid JavaScript code is also valid TypeScript code. TypeScript adds optional static typing to JavaScript, which can help you catch errors early and improve the maintainability of your code. It is also used to define the data models for the frontend, which are used to validate the data that is sent to and received from the backend services. This is similar to how we use Pydantic models in the backend to validate the data that is sent to and received from the backend services. In this way, we can ensure that the data is correct and that the frontend and backend are in sync with each other.
+
+### Uvicorn
+The backend of this application is run using [Uvicorn](https://www.uvicorn.org/). Uvicorn is a lightning-fast ASGI server implementation, using uvloop and httptools. It is designed to be easy to use and to provide a high-performance server for your FastAPI application. 
