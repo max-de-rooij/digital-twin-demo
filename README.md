@@ -57,6 +57,7 @@ Services contain various parts. This is how you can extend the application:
 
 [OPTIONAL]
 If you are making a service that the frontend interacts with, you will also need to tell the frontend how to interact with your service and how it should respond to the data it receives.
+
 **Frontend**:
 1. Define your service in the `frontend/src/services` folder. This is a TypeScript file that defines how the frontend interacts with your service. You can define functions that send requests to your service and handle the responses. This will look similar to how the backend service is defined, but it will be in TypeScript instead of Python.
 2. In the frontend, insert the places where your service is used and define how the frontend responds to the interactions with your service. For example, you can create a new page in the `frontend/src/pages` folder that displays the data from your service, or you can create a new component in the `frontend/src/components` folder that allows the user to interact with your service. This part may vary depending on what your service does and how it is used in the application. You can also use existing components and pages to interact with your service, or you can create new ones if needed.
