@@ -68,3 +68,32 @@ Additionally, because each part of the application is defined in its own service
 
 ### Speaking of testing, where are the tests?
 The tests for the backend services are located in the `backend/tests` folder. Each service and its corresponding endpoints should have their own test files. We use the `pytest` framework for testing. 
+
+## Seeing the application in action
+To see the application in action, you can run the backend and frontend services. You can do this by running the following commands in separate terminal windows:
+
+First, we start up the backend service:
+```bash
+pixi run backend
+```
+
+Then, in a separate terminal window, we start up the frontend service:
+```bash
+pixi run frontend
+```
+
+You can then open your web browser and navigate to `http://localhost:5173` to see the application in action. You can also use the API endpoints directly by navigating to `http://localhost:8000/docs` to see the automatically generated API documentation.
+
+This may not be a very exciting application, but it should be a good starting point for your digital twin application.
+
+## An important note about data storage
+This application is stateless. This means that the application does not store any data between requests. In your application, you may want to have some way of storing data in a database. For example, you may want to keep track of patients over time, or you want to store the results of your calculations.
+
+In a similar way that we have added the BMI service, you can add a new service that interacts with a database. You can use any type of database you want. I encourage you to explore different types of databases and see which one works best for your application. You can also use an ORM (Object-Relational Mapping) library to interact with your database in a more Pythonic way. Some popular ORMs for Python are SQLAlchemy and Tortoise ORM, but this is not a requirement.
+
+### Sensitive data
+If you are working with sensitive data, please DO NOT upload any of it to GitHub. GitHub is not a secure place to store sensitive data. If you need to store sensitive data, please use a secure database or storage service. You can also separate your sensitive data parts of the project from the application. Below is an example of a situation where this can be useful:
+
+You want to train an AI model on sensitive data, and use this model to make predictions in your application. To prevent sensitive data from leaking into your application, you can train the model in a separate project that is not connected to your application. The code can be in a separate GitHub repository, and the data is stored in a secure database (and not in the GitHub repository). 
+
+After training, you can then export the trained model weights into your application to build a prediction service, and use it in your application without exposing any sensitive data. For demonstration purposes, you can build a mock database in SQLite, which is stored as a file wihtin the Github repository, and use this to demonstrate how your application works. This way, you can show the functionality of your application without exposing any sensitive data.
