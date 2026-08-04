@@ -1,6 +1,6 @@
 ![GitHub License](https://img.shields.io/github/license/computational-biology-tue/digital-twin-demo)
-![Static Badge](https://img.shields.io/badge/Powered_by-Pixi-%23facc15)
-![Static Badge](https://img.shields.io/badge/Built_with-Lit-%23334eff?logo=lit&logoColor=%23334eff&labelColor=white)
+[![Static Badge](https://img.shields.io/badge/Powered_by-Pixi-%23facc15)](https://pixi.prefix.dev/latest/)
+[![Static Badge](https://img.shields.io/badge/Built_with-Lit-%23334eff?logo=lit&logoColor=%23334eff&labelColor=white)](https://lit.dev/)
 [![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
 
 
