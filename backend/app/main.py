@@ -23,7 +23,7 @@ app.add_middleware(
 # Register API endpoints
 app.include_router(bmi_router, prefix="/api")
 
+
 @app.get("/")
 def root():
     return {"message": "BMI API is running"}
-

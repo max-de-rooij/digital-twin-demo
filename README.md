@@ -1,3 +1,5 @@
+[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
+
 # Digital Twin Demo Application
 This repository contains a demo application for the Digital Twin in Healthcare course. During the workshop, we'll be discussing the entire application and how it's structured. You will be able to use this application as a template or starting point for your own projects. 
 
@@ -69,6 +71,26 @@ Additionally, because each part of the application is defined in its own service
 
 ### Speaking of testing, where are the tests?
 The tests for the backend services are located in the `backend/tests` folder. Each service and its corresponding endpoints should have their own test files. We use the `pytest` framework for testing. 
+
+## Automatic checking of code quality and style
+We also have added support for `ruff`, a fast code linter that will check that the code adheres to the same style everywhere, and will check for vulnerabilities and possible bugs. You can invoke a check with:
+
+```
+pixi run ruff check
+```
+
+And you can ask it to automatically fix errors it finds with:
+
+```
+pixi run ruff check --fix
+```
+
+You can also use ruff as a formatter:
+```
+pixi run ruff format
+```
+
+For more info, check out the [ruff documentation](https://docs.astral.sh/ruff/).
 
 ## Seeing the application in action
 To see the application in action, you can run the backend and frontend services. You can do this by running the following commands in separate terminal windows:

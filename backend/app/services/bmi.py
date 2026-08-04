@@ -1,6 +1,6 @@
-
 def calculate_bmi(weight: float, height: float):
-    return weight / (height ** 2)
+    return weight / (height**2)
+
 
 def categorize_bmi(bmi: float):
     if bmi < 18.5:

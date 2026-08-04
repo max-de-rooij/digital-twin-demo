@@ -11,4 +11,3 @@ def calculate(request: BMIRequest):
     bmi_value = calculate_bmi(request.weight, request.height)
     category = categorize_bmi(bmi_value)
     return BMIResponse(bmi=bmi_value, category=category)
-

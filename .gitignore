@@ -4,3 +4,4 @@
 .pixi
 
 .DS_Store
+.ruff_cache
