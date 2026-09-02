@@ -18,5 +18,4 @@ jobs:
       - uses: prefix-dev/setup-pixi@v0.10.2
         with:
           pixi-version: v0.66.0
-          working-directory: ../
       - run: pixi run test
