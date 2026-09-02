@@ -19,4 +19,5 @@ jobs:
         with:
           pixi-version: v0.66.0
           manifest-path: ../pixi.toml
+          working-directory: ../
       - run: pixi run test
