@@ -25,6 +25,11 @@ jobs:
           ls -la
           test -f pixi.toml
           echo "pixi.toml found!"
+
+      - name: Test conda-forge connectivity
+        run: |
+          curl -I --http1.1 https://conda.anaconda.org/conda-forge/linux-64/repodata.json.zst
+          curl -I --http2 https://conda.anaconda.org/conda-forge/linux-64/repodata.json.zst
       - name: Setup pixi
         uses: prefix-dev/setup-pixi@v0.10.2
         with:
